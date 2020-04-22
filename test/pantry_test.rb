@@ -26,8 +26,9 @@ class PantryTest < Minitest::Test
     assert_equal expected, @pantry.stock
 
     @pantry.restock(@ingredient1, 10)
+    @pantry.restock(@ingredient2, 10)
 
-    expected = {@ingredient1 => 15}
+    expected = {@ingredient1 => 15, @ingredient2 => 10}
     assert_equal expected, @pantry.stock
   end
 
