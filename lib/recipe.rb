@@ -11,9 +11,7 @@ class Recipe
   end
 
   def ingredients
-    @ingredients_required.map do |ingredient, quantity|
-      ingredient
-    end
+    @ingredients_required.map { |ingredient, quantity| ingredient }
   end
 
   def total_calories

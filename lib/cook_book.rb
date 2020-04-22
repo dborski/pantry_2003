@@ -12,11 +12,9 @@ class CookBook
   end
 
   def ingredients
-    @recipes.map do |recipe|
-      recipe.ingredients.map do |ingredient, quantity|
-        ingredient.name
-      end
-    end.flatten.uniq
+    @recipes.flat_map do |recipe|
+      recipe.ingredients.flat_map  { |ingredient, quantity| ingredient.name}
+    end.uniq
   end
 
   def highest_calorie_meal
