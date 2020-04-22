@@ -9,4 +9,10 @@ class Recipe
   def add_ingredient(ingredient, quantity)
     @ingredients_required[ingredient] += quantity
   end
+
+  def ingredients
+    @ingredients_required.map do |ingredient, quantity|
+      ingredient
+    end
+  end
 end
