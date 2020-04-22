@@ -13,7 +13,7 @@ class CookBook
 
   def ingredients
     @recipes.flat_map do |recipe|
-      recipe.ingredients.flat_map  { |ingredient, quantity| ingredient.name}
+      recipe.ingredients.flat_map { |ingredient, quantity| ingredient.name }
     end.uniq
   end
 
@@ -23,5 +23,14 @@ class CookBook
 
   def date
     Date.today.strftime("%m-%d-%Y")
+  end
+
+  def summary
+  #   summary = [Hash.new { |hash, key| hash[key] = {} }]
+  #
+  #   @recipes.each do |recipe|
+  #     summary.first[:name] = recipe.name
+  #     summary.first[:details] = {ingredients: recipe.ingredients_required}
+  #     summary.first[:total_calories]
   end
 end
