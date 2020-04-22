@@ -8,4 +8,8 @@ class Pantry
   def restock(ingredient, quantity)
     @stock[ingredient] += quantity
   end
+
+  def stock_check(ingredient)
+    @stock[ingredient]
+  end
 end
